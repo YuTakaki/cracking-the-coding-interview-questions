@@ -1,15 +1,16 @@
 /*
-Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part.
+Bubble Sort is the simplest sorting algorithm
+that works by repeatedly swapping the 
+adjacent elements if they are in the wrong order.
+This algorithm is not suitable for large data sets
+as its average and worst-case time complexity is 
+quite high.
 
-This algorithm sorts an array of items by repeatedly taking an element from the unsorted portion of the array and inserting it into its correct position in the sorted portion of the array.
+Follow the below steps to solve the problem:
 
-1. The procedure takes a single argument, ‘A’, which is a list of sortable items.
-2. The variable ‘n’ is assigned the length of the array A.
-3. The outer for loop starts at index ‘1’ and runs for ‘n-1’ iterations, where ‘n’ is the length of the array.
-4. The inner while loop starts at the current index i of the outer for loop and compares each element to its left neighbor. If an element is smaller than its left neighbor, the elements are swapped.
-5. The inner while loop continues to move an element to the left as long as it is smaller than the element to its left.
-6. Once the inner while loop is finished, the element at the current index is in its correct position in the sorted portion of the array.
-7. The outer for loop continues iterating through the array until all elements are in their correct positions and the array is fully sorted.
+Run a nested for loop to traverse the input array using two variables i and j, such that 0 ≤ i < n-1 and 0 ≤ j < n-i-1
+If arr[j] is greater than arr[j+1] then swap these adjacent elements, else move on
+Print the sorted array
 */
 
 /**
@@ -26,7 +27,7 @@ const swap = (arr: number[], x: number, y: number) => {
 };
 
 /**
- * sort array in insertion sort algorithm
+ * sort array in bubble sort algorithm
  * @param arr array to sort
  * @returns sorted array
  */
