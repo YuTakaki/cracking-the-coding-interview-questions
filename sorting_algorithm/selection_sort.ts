@@ -24,7 +24,12 @@ const swap = (arr: number[], x: number, y: number) => {
   arr[x] = temp;
 };
 
-const selection_sort = (arr: number[]) => {
+/**
+ * sort array in selection sort algorithm
+ * @param arr array to sort
+ * @returns sorted array
+ */
+const selection_sort = (arr: number[]): number[] => {
   for (let i = 0; i < arr.length - 1; i++) {
     let minIndex = i;
     for (let j = i; j < arr.length; j++) {
